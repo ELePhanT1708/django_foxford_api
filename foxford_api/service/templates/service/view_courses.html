@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block maintitle %}
+<div class="col-md-12">
+    <h3>Курсы</h3>
+</div>
+{% endblock maintitle%}
+
+{% block content %}
+{% for course in courses %}
+<div class="card col-md-3" align="center">
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="{{ course.get_absolute_url}}">{{ course }}
+            </a>
+        </h5>
+
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

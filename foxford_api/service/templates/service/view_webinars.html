@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block maintitle %}
+<div class="col-md-12">
+    <h3>Вебинары</h3>
+</div>
+{% endblock maintitle%}
+
+{% block content %}
+{% for webinar in webinars %}
+<div class="card col-md-3" align="center">
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="{{ webinar.get_absolute_url}}">{{ webinar }}
+            </a>
+        </h5>
+        <p class="card-text"><strong>Webinar :</strong> <a href="#">{{webinar.name}}<br></a>
+            <strong>Time :</strong> <a>{{ webinar.planned_time }}</a>
+        <p class="card-description"> Duration : {{ webinar.duration_in_hours | safe }} hours</p>
+            </p>
+
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

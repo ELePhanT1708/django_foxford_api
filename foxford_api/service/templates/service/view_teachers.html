@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block maintitle %}
+<div class="col-md-12">
+    <h3>Преподаватели</h3>
+</div>
+{% endblock maintitle%}
+
+{% block content %}
+{% for teacher in teachers %}
+<div class="card col-md-3" align="center">
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="{{ teacher.get_absolute_url}}">{{ teacher }}
+            </a>
+        </h5>
+
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
