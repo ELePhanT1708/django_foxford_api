@@ -21,8 +21,6 @@
 4. In cloned directory from powershell or something similar write:
     - 'docker-compose up --build' : поднимится сервер с базой данных и графическим интерфейсом adminer для него
 5. In other window of powershell in the same directory call: py .\foxford_api\manage.py runserver
-6. 
-
 
 
 ##
